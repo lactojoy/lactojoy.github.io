@@ -1,12 +1,10 @@
 .affiliation {
   font-style: italic;
 }
-
 .affiliation p {
   font-weight: bold;
   font-style: normal;
 }
-
 .affiliation a {
   color: inherit;
 }
@@ -30,16 +28,13 @@
 .ditto-prompt-text {
   color: #8fbddf;
 }
-
-.ditto-prompt-text>span {
+.ditto-prompt-text > span {
   color: #b9b9b9;
 }
-
 .ditto-text {
   color: #9fde83;
 }
-
-.ditto-text>span {
+.ditto-text > span {
   color: black;
 }
 
@@ -48,14 +43,12 @@
   align-items: safe center;
   flex-direction: column;
 }
-
-.ditto-audioviz>canvas {
+.ditto-audioviz > canvas {
   margin-top: 4px;
   margin-bottom: 8px;
 }
-
-.ditto-audioviz>canvas,
-.ditto-audioviz>audio {
+.ditto-audioviz > canvas,
+.ditto-audioviz > audio {
   width: 300px;
   max-width: 100%;
   height: 54px;
@@ -68,19 +61,16 @@
   flex-wrap: wrap;
   align-content: end;
 }
-
-.ditto-toggle>div {
+.ditto-toggle > div {
   display: none;
   width: fit-content;
   cursor: pointer;
   padding-bottom: 1px;
 }
-
-.ditto-toggle>div.show {
+.ditto-toggle > div.show {
   display: block;
 }
-
-.ditto-toggle>div.show:hover {
+.ditto-toggle > div.show:hover {
   border-bottom: 1px solid black;
   padding-bottom: 0px;
 }
@@ -89,29 +79,24 @@
 .ditto-sample-box table td {
   text-align: center;
 }
-
 .ditto-sample-box table td audio {
   width: 140px;
   height: 54px;
 }
-
-#text-prompt-box .ditto-sample-box table>tbody>tr td:nth-child(1) {
+#text-prompt-box .ditto-sample-box table > tbody > tr td:nth-child(1) {
   text-align: right;
   padding-right: 0px;
 }
-
-#text-prompt-box .ditto-sample-box table>tbody>tr td:nth-child(2) {
+#text-prompt-box .ditto-sample-box table > tbody > tr td:nth-child(2) {
   text-align: left;
 }
 
 #fab {
   display: none;
 }
-
 #fab.show {
   display: block;
 }
-
 .fab {
   background-color: transparent;
   height: 48px;
@@ -149,7 +134,6 @@
   border-radius: 24px;
   z-index: 6;
 }
-
 .mainop i {
   position: relative;
   top: 12px;
@@ -181,7 +165,6 @@
     font-size: 0.8em;
     text-align: right;
   }
-
   .ditto-sample-box table td.border-right {
     border-right: none;
     border-bottom: 1px outset #ccc;
@@ -195,17 +178,14 @@
   #text-prompt-box .ditto-sample-box table td::before {
     width: 50px;
   }
-
-  #text-prompt-box .ditto-sample-box table>tbody>tr {
+  #text-prompt-box .ditto-sample-box table > tbody > tr {
     display: flex;
     flex-flow: wrap;
   }
-
-  #text-prompt-box .ditto-sample-box table>tbody>tr td:nth-child(1) {
+  #text-prompt-box .ditto-sample-box table > tbody > tr td:nth-child(1) {
     width: 50%;
   }
-
-  #text-prompt-box .ditto-sample-box table>tbody>tr td:nth-child(2) {
+  #text-prompt-box .ditto-sample-box table > tbody > tr td:nth-child(2) {
     width: 50%;
   }
 }

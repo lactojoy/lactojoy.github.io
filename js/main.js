@@ -108,12 +108,12 @@ function divBuilderLibriSpeech(id, data) {
     );
 
     // inject values
-    const promptText = copiedNode.querySelector(".ditto-prompt-text>span");
+    const promptText = copiedNode.querySelector(".ditto-prompt-text > span");
     promptText.innerText = data["prompt_text_list"][i];
-    const text = copiedNode.querySelector(".ditto-text>span");
+    const text = copiedNode.querySelector(".ditto-text > span");
     text.innerText = data["text_list"][i];
 
-    const audioOursAll = copiedNode.querySelector(".ditto-audioviz>audio");
+    const audioOursAll = copiedNode.querySelector(".ditto-audioviz audio");
     audioOursAll.setAttribute(
       "src",
       data["path_template_list"][i].replace("{}", "ours_all"),
@@ -140,7 +140,7 @@ function divBuilderLibriSpeech(id, data) {
     );
 
     // inject functions
-    const canvas = copiedNode.querySelector(".ditto-audioviz>canvas");
+    const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
     audioVisualizer(audioOursAll, canvas, data["prompt_time"][i]);
 
     const toggle = copiedNode.querySelector(".ditto-toggle");
@@ -189,12 +189,12 @@ function divBuilderVCTK(id, data) {
     );
 
     // inject values
-    const promptText = copiedNode.querySelector(".ditto-prompt-text>span");
+    const promptText = copiedNode.querySelector(".ditto-prompt-text > span");
     promptText.innerText = data["prompt_text_list"][i];
-    const text = copiedNode.querySelector(".ditto-text>span");
+    const text = copiedNode.querySelector(".ditto-text > span");
     text.innerText = data["text_list"][i];
 
-    const audioOursAll = copiedNode.querySelector(".ditto-audioviz>audio");
+    const audioOursAll = copiedNode.querySelector(".ditto-audioviz audio");
     audioOursAll.setAttribute(
       "src",
       data["path_template_list"][i].replace("{}", "ours_all"),
@@ -221,7 +221,7 @@ function divBuilderVCTK(id, data) {
     );
 
     // inject functions
-    const canvas = copiedNode.querySelector(".ditto-audioviz>canvas");
+    const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
     audioVisualizer(audioOursAll, canvas, data["prompt_time"][i]);
 
     const toggle = copiedNode.querySelector(".ditto-toggle");
@@ -270,12 +270,12 @@ function divBuilder(id, data) {
     );
 
     // inject values
-    const promptText = copiedNode.querySelector(".ditto-prompt-text>span");
+    const promptText = copiedNode.querySelector(".ditto-prompt-text > span");
     promptText.innerText = data["prompt_text_list"][i];
-    const text = copiedNode.querySelector(".ditto-text>span");
+    const text = copiedNode.querySelector(".ditto-text > span");
     text.innerText = data["text_list"][i];
 
-    const audioOursAll = copiedNode.querySelector(".ditto-audioviz>audio");
+    const audioOursAll = copiedNode.querySelector(".ditto-audioviz audio");
     audioOursAll.setAttribute(
       "src",
       data["path_template_list"][i].replace("{}", "ours_all"),
@@ -302,7 +302,7 @@ function divBuilder(id, data) {
     );
 
     // inject functions
-    const canvas = copiedNode.querySelector(".ditto-audioviz>canvas");
+    const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
     audioVisualizer(audioOursAll, canvas, data["prompt_time"][i]);
 
     const toggle = copiedNode.querySelector(".ditto-toggle");
@@ -359,6 +359,26 @@ function divBuilderCeleb(id, data) {
   for (let i = 0; i < data["text_list"].length; i++) {
     cards[i].querySelector("div:nth-child(1)").innerHTML =
       "<p style='font-weight: bold;'>Celeb: " +
+      data["name_list"][i] +
+      "</p>" +
+      cards[i].querySelector("div:nth-child(1)").innerHTML;
+    cards[i]
+      .querySelectorAll(".ditto-sample-box table tr")
+      .forEach((elm, idx) => {
+        elm.removeChild(elm.children[3]);
+        elm.removeChild(elm.children[2]);
+        elm.removeChild(elm.children[1]);
+      });
+  }
+}
+
+function divBuilderAnime(id, data) {
+  divBuilder(id, data);
+
+  const cards = document.querySelectorAll(id + " .ditto-card");
+  for (let i = 0; i < data["text_list"].length; i++) {
+    cards[i].querySelector("div:nth-child(1)").innerHTML =
+      "<p style='font-weight: bold;'>Anime: " +
       data["name_list"][i] +
       "</p>" +
       cards[i].querySelector("div:nth-child(1)").innerHTML;
@@ -458,7 +478,7 @@ const mlsData = {
     "au lieu de répondre à ces questions le jeune homme se mit à pleurer amèrement que la fortune est inconstante s'écria-t-il elle se plaît à abaisser les hommes qu'elle a élevés",
     "et de se savoir ainsi chantée par un poète cela lui fit oublier toute modestie elle allongea son cou derrière ses feuilles tourna vaniteusement sa tête à gauche et à droite et se mira avec complaisance dans une grosse goutte de rosée qui était restée pendue à un brin d'herbe",
     "lo quise decir a vuestra merced es que es fama en este pueblo que no hay gente más mala que las placeras porque todas son desvergonzadas desalmadas y atrevidas y yo así lo creo por las que he visto en otros pueblos",
-    "en otro cajón el valor de treinta y seis libras esterlinas en moneda de europa y del brasil parte en oro parte en plata y entre otras algunas piezas de a ocho a la vista de aquel dinero me sonreí sardónicamente metal miserable exdittoé de qué puedes servirme",
+    "en otro cajón el valor de treinta y seis libras esterlinas en moneda de europa y del brasil parte en oro parte en plata y entre otras algunas piezas de a ocho a la vista de aquel dinero me sonreí sardónicamente metal miserable exclamé de qué puedes servirme",
     "molto impensierito della diffusione del malcostume per opera della stampa quotidiana proibisce alla moglie e alla figliuola la lettura dei giornali la piccola medea è stata educata secondo le rigide massime di condotta che a lui",
     "però disse il maestro se tu tronchi qualche fraschetta d'una d'este piante e pensier c'hai si faran tutti monchi",
     "o homem ao destacar-se do último elo da cadeia dos seres sentiu-se forte e senhor da terra a natureza oferecia-lhe por toda a parte seus peitos uberantes e este regozijo de harmonia ligava a sua existência a vida panteística do universo",
@@ -549,12 +569,54 @@ const celebData = {
   prompt_time: [8.731, 7.43, 6.873, 8.266, 7.152, 16.718, 8.638],
 };
 
+const animeData = {
+  text_list: [
+    "We must unite and harness our strengths, for the fate of our world hangs in the balance.",
+    "However, if you choose to stay, know that the truth I unveil may forever alter the course of your journey.",
+    "So here we are, trying to catch up, and hoping this day turns around soon.",
+    "And sometimes, in both realms, it's not just about shining the brightest, but enduring the longest.",
+    "But to those who knew her well, it was a symbol of her unwavering determination and spirit.",
+    "We have the responsibility to ensure power and technology are used for the greater good.",
+    "Our goal is to bridge communication gaps and preserve the richness of these unique languages.",
+  ],
+
+  path_template_list: [
+    "audios/famous/optimusprime_{}.wav",
+    "audios/famous/sherlock_{}.wav",
+    "audios/famous/jessie_{}.wav",
+    "audios/famous/caine_{}.wav",
+    "audios/famous/rachel_{}.wav",
+    "audios/famous/robert_{}.wav",
+    "audios/famous/zuck_{}.wav",
+  ],
+  name_list: [
+    "Optimus Prime",
+    "Benedict Cumberbatch",
+    "Jessie Eisenberg",
+    "Michael Caine",
+    "Rachel McAdams",
+    "Robert Downey Jr.",
+    "Mark Zuckerberg",
+  ],
+  prompt_text_list: [
+    "Perhaps, in any case, we had better see some improvement, or this battle may be lost before it has truly begun.",
+    "So maybe, that you would prefer to forgo my secret rather than consent to becoming a prisoner here for what might be several days.",
+    "I'm starting this, twelve minutes late which is annoying and not my fault. Rachel needed my help and Ziggy would not stop crying.",
+    "What you need to be a star in movies is not that different from what you need to be a star in the other universe. It just takes a little more luck.",
+    "So far, the ordinary observer, an extraordinary observer might have seen that the chin was very pointed and pronounced. ",
+    "They, say the best weapon is one you never have to fire. I respectfully disagree! I prefer, the weapon you only have to fire once! That's how dad did it! that's how America does it! and it's worked out pretty well so far.",
+    "Alright so our team developed the first speech to speech AI translation system, that works for languages that are only spoken and not written like Hokkien.",
+  ],
+  // prompt_time: Array(7).fill(3),
+  prompt_time: [8.731, 7.43, 6.873, 8.266, 7.152, 16.718, 8.638],
+};
+
 divBuilderCeleb("#celeb-box", celebData);
-//divBuilder("#librispeech-box", librispeechData);
-//divBuilder("#vctk-box", vctkData);
-//divBuilderMLS("#mls-box", mlsData);
+divBuilderAnime("#anime-box", animeData);
+divBuilder("#librispeech-box", librispeechData);
+divBuilderMLS("#mls-box", mlsData);
 let librispeechFlag = false;
-let vctkFlag = false;
+let animeFlag = false;
 let mlsFlag = false;
 
 document
@@ -565,6 +627,14 @@ document
     if (!librispeechFlag) {
       librispeechFlag = true;
       divBuilderLibriSpeech("#librispeech-box", librispeechData);
+    }
+  });
+document
+  .querySelector('button[data-bs-toggle="tab"][data-bs-target="#anime-box"]')
+  .addEventListener("shown.bs.tab", function (event) {
+    if (!mlsFlag) {
+      animeFlag = true;
+      divBuilderMLS("#anime-box", animeData);
     }
   });
 document
