@@ -117,17 +117,6 @@
                 LibriSpeech
               </button>
             </li>
-            <!-- <li class="nav-item" role="presentation">
-              <button
-                class="nav-link"
-                data-bs-toggle="tab"
-                data-bs-target="#vctk-box"
-                type="button"
-                role="tab"
-              >
-                VCTK
-              </button>
-            </li> -->
             <li class="nav-item" role="presentation">
               <button
                 class="nav-link"
@@ -148,6 +137,17 @@
                 role="tab"
               >
                 Celebrities
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                data-bs-toggle="tab"
+                data-bs-target="#anime-box"
+                type="button"
+                role="tab"
+              >
+                Anime Characters
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -225,33 +225,6 @@
                   > respectively.
               </p>
             </div>
-            <!-- <div
-              id="vctk-box"
-              role="tabpanel"
-              class="tab-pane fade container pt-5 shadow p-5 mb-5 bg-white rounded"
-            >
-              <h2 id="vctk" style="text-align: center">
-                Non-Zero-Shot TTS (VCTK)
-              </h2>
-              <p>
-                The VCTK dataset is not an unseen dataset for our model, but we
-                provide samples for comparison with other models. We represent
-                <span style="color: #8fbddf; font-weight: bold"
-                  >the prompt in blue</span
-                >, and
-                <span style="color: #9fde83; font-weight: bold"
-                  >the generated audio in green</span
-                >. The resulting speech closely resembles the reference in
-                voice, background noise, and speaking style. When dividing
-                prompts into 3-second segments, the audio boundaries may not
-                always end in silence and could sometimes cut off words midway.
-                When you click on "Show baselines", you can see the ground truth
-                and baseline audio, etc. YourTTS and Vall-E audios are brought
-                from YourTTS demo<sup><a href="#footnote1-2">1</a></sup> and
-                Vall-E demo<sup><a href="#footnote2-2">2</a></sup
-                >, respectively.
-              </p>
-            </div> -->
             <div
               id="mls-box"
               role="tabpanel"
@@ -273,7 +246,8 @@
                 always end in silence and could sometimes cut off words midway.
                 For further details, please see <b>Multilingual Evaluation</b> part in <b>Section 5.1</b> of our paper.
                 When you click on "Show baselines", you can see the ground truth
-                and baseline audio, etc.
+                and baseline audio, etc. CLaM-TTS audios are brought from
+                CLaM-TTS demo<sup><a href=“#footnote1-1”>1</a></sup>
               </p>
             </div>
             <div
@@ -283,9 +257,8 @@
             >
               <h2 id="celeb" style="text-align: center">Celebrities</h2>
               <p>
-                CLaM-TTS can imitate famous figures' voice and speaking style.
-                Each text is generated via GPT-4 to seamlessly continue the
-                given prompt. We represent
+                DiTTo-TTS is capable of replicating the voices and speech styles of well-known personalities.
+                We represent
                 <span style="color: #8fbddf; font-weight: bold"
                   >the prompt in blue</span
                 >, and
@@ -294,7 +267,29 @@
                 >. The resulting speech closely resembles the reference in
                 voice, background noise, and speaking style. When you click on
                 "Show baselines", you can see the ground truth and baseline
-                audio, etc.
+                audio, etc. Texts corresponding to the generated audio and CLaM-TTS audios are brought from
+                CLaM-TTS demo<sup><a href=“#footnote1-1”>1</a></sup>
+              </p>
+            </div>
+            <div
+              id="anime-box"
+              role="tabpanel"
+              class="tab-pane fade container pt-5 shadow p-5 mb-5 bg-white rounded"
+            >
+              <h2 id="anime" style="text-align: center">Anime Characters</h2>
+              <p>
+                DiTTo-TTS is capable of replicating the voices and speech styles of well-known anime characters.
+                We represent
+                <span style="color: #8fbddf; font-weight: bold"
+                  >the prompt in blue</span
+                >, and
+                <span style="color: #9fde83; font-weight: bold"
+                  >the generated audio in green</span
+                >. The resulting speech closely resembles the reference in
+                voice, background noise, and speaking style. When you click on
+                "Show baselines", you can see the ground truth and baseline
+                audio, etc. Texts corresponding to the generated audio and Mega-TTS 2 audios are brought from
+                Mega-TTS 2 demo<sup><a href=“#footnote1-1”>1</a></sup>
               </p>
             </div>
             <div
@@ -1195,6 +1190,7 @@
                   <th>YourTTS</th>
                   <th>Vall-E</th>
                   <th>CLaM-TTS</th>
+                  <th>Mega-TTS 2</th>
                 </tr>
               </thead>
               <tbody>
@@ -1212,6 +1208,9 @@
                     <audio controls="controls" preload="none"></audio>
                   </td>
                   <td data-label="CLaM-TTS">
+                    <audio controls="controls" preload="none"></audio>
+                  </td>
+                  <td data-label="Mega-TTS 2">
                     <audio controls="controls" preload="none"></audio>
                   </td>
                 </tr>

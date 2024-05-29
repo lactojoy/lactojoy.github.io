@@ -143,6 +143,11 @@ function divBuilderLibriSpeech(id, data) {
       data["path_template_list"][i].replace("{}", "clam"),
     );
 
+    const card = copiedNode.querySelectorAll(".ditto-sample-box table tr")
+    card.forEach((elm, idx) => {
+      elm.removeChild(elm.children[5]);
+    });
+
     // inject functions
     const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
     audioVisualizer(audioOursAll, canvas, data["prompt_time"][i]);
@@ -231,6 +236,10 @@ function divBuilder(id, data) {
       "src",
       data["path_template_list"][i].replace("{}", "clam"),
     );
+    sampleAudioList[5].setAttribute(
+      "src",
+      data["path_template_list"][i].replace("{}", "megatts2"),
+    );
 
     // inject functions
     const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
@@ -277,10 +286,21 @@ function divBuilderMLS(id, data) {
     cards[i]
       .querySelectorAll(".ditto-sample-box table tr")
       .forEach((elm, idx) => {
+        elm.removeChild(elm.children[5]);
         elm.removeChild(elm.children[3]);
         elm.removeChild(elm.children[2]);
       });
   }
+
+  const fragment = document.createDocumentFragment();
+  const footnote1 = document.createElement("span");
+  footnote1.innerHTML =
+    '<sup id="footnote1-1">1</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
+
+  fragment.appendChild(footnote1);
+
+  const root = document.querySelector(id);
+  root.appendChild(fragment);
 }
 
 function divBuilderCeleb(id, data) {
@@ -296,11 +316,53 @@ function divBuilderCeleb(id, data) {
     cards[i]
       .querySelectorAll(".ditto-sample-box table tr")
       .forEach((elm, idx) => {
+        elm.removeChild(elm.children[5]);
         elm.removeChild(elm.children[3]);
         elm.removeChild(elm.children[2]);
         elm.removeChild(elm.children[1]);
       });
   }
+
+  const fragment = document.createDocumentFragment();
+  const footnote1 = document.createElement("span");
+  footnote1.innerHTML =
+    '<sup id="footnote1-1">1</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
+
+  fragment.appendChild(footnote1);
+
+  const root = document.querySelector(id);
+  root.appendChild(fragment);
+}
+
+function divBuilderAnime(id, data) {
+  divBuilder(id, data);
+
+  const cards = document.querySelectorAll(id + " .ditto-card");
+  for (let i = 0; i < data["text_list"].length; i++) {
+    cards[i].querySelector("div:nth-child(1)").innerHTML =
+      "<p style='font-weight: bold;'>Anime: " +
+      data["name_list"][i] +
+      "</p>" +
+      cards[i].querySelector("div:nth-child(1)").innerHTML;
+    cards[i]
+      .querySelectorAll(".ditto-sample-box table tr")
+      .forEach((elm, idx) => {
+        elm.removeChild(elm.children[4]);
+        elm.removeChild(elm.children[3]);
+        elm.removeChild(elm.children[2]);
+        elm.removeChild(elm.children[1]);
+      });
+  }
+
+  const fragment = document.createDocumentFragment();
+  const footnote1 = document.createElement("span");
+  footnote1.innerHTML =
+    '<sup id="footnote1-1">1</sup><a href="https://boostprompt.github.io/boostprompt/">https://boostprompt.github.io/boostprompt/</a>';
+
+  fragment.appendChild(footnote1);
+
+  const root = document.querySelector(id);
+  root.appendChild(fragment);
 }
 
 const librispeechData = {
@@ -441,6 +503,36 @@ const celebData = {
   prompt_time: [8.731, 7.43, 6.873, 8.266, 7.152, 16.718, 8.638],
 };
 
+const animeData = {
+  text_list: [
+    "Let's go drink until we can't feel feelings anymore.",
+    "Uh, it's not like the internet to go crazy about something small and stupid.",
+    "Then I would never talk to that person about boa constrictors, or primeval forests, or stars. I would bring myself down to his level.",
+    "In what a disgraceful light might it not strike so vain a man!",
+  ],
+
+  path_template_list: [
+    "audios/anime/spongebob_{}.wav",
+    "audios/anime/petergriffin_{}.wav",
+    "audios/anime/rick_{}.wav",
+    "audios/anime/morty_{}.wav",
+  ],
+  name_list: [
+    "Sponge Bob",
+    "Peter Griffin",
+    "Rick",
+    "Morty",
+  ],
+  prompt_text_list: [
+    "My name is Spongebob Squarepants. And I’m gonna tell you about paying.",
+    "Well, I, I’m getting something really special too and by special, I don’t mean special like that Kleinman boy down the street. More special, like, like special K the serial.",
+    "Yeah, that’s the difference between you and me morty. I never go back to the carpet store.",
+    "I’m being serious. Ok?",
+  ],
+  // prompt_time: Array(7).fill(3),
+  prompt_time: [3.239, 9.850, 4.350, 1.750],
+};
+
 divBuilderCeleb("#celeb-box", celebData);
 //divBuilder("#librispeech-box", librispeechData);
 //divBuilder("#vctk-box", vctkData);
@@ -465,6 +557,14 @@ document
     if (!mlsFlag) {
       mlsFlag = true;
       divBuilderMLS("#mls-box", mlsData);
+    }
+  });
+document
+  .querySelector('button[data-bs-toggle="tab"][data-bs-target="#anime-box"]')
+  .addEventListener("shown.bs.tab", function (event) {
+    if (!mlsFlag) {
+      mlsFlag = true;
+      divBuilderAnime("#anime-box", animeData);
     }
   });
 
