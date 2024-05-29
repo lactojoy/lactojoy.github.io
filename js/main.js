@@ -138,10 +138,10 @@ function divBuilderLibriSpeech(id, data) {
       "src",
       data["path_template_list"][i].replace("{}", "vall-e"),
     );
-    // sampleAudioList[4].setAttribute(
-    //   "src",
-    //   data["path_template_list"][i].replace("{}", "clam"),
-    // );
+    sampleAudioList[4].setAttribute(
+      "src",
+      data["path_template_list"][i].replace("{}", "clam"),
+    );
 
     // inject functions
     const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
@@ -174,10 +174,14 @@ function divBuilderLibriSpeech(id, data) {
     '<sup id="footnote1-1">1</sup><a href="https://edresson.github.io/YourTTS/">https://edresson.github.io/YourTTS/</a><br>';
   const footnote2 = document.createElement("span");
   footnote2.innerHTML =
-    '<sup id="footnote2-1">2</sup><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a>';
+    '<sup id="footnote2-1">2</sup><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a><br>';
+  const footnote3 = document.createElement("span");
+  footnote3.innerHTML =
+    '<sup id="footnote3-1">3</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
 
   fragment.appendChild(footnote1);
   fragment.appendChild(footnote2);
+  fragment.appendChild(footnote3);
 
   const root = document.querySelector(id);
   root.appendChild(fragment);
@@ -223,10 +227,10 @@ function divBuilder(id, data) {
       "src",
       data["path_template_list"][i].replace("{}", "vall-e"),
     );
-    // sampleAudioList[4].setAttribute(
-    //   "src",
-    //   data["path_template_list"][i].replace("{}", "clam"),
-    // );
+    sampleAudioList[4].setAttribute(
+      "src",
+      data["path_template_list"][i].replace("{}", "clam"),
+    );
 
     // inject functions
     const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
@@ -286,26 +290,6 @@ function divBuilderCeleb(id, data) {
   for (let i = 0; i < data["text_list"].length; i++) {
     cards[i].querySelector("div:nth-child(1)").innerHTML =
       "<p style='font-weight: bold;'>Celeb: " +
-      data["name_list"][i] +
-      "</p>" +
-      cards[i].querySelector("div:nth-child(1)").innerHTML;
-    cards[i]
-      .querySelectorAll(".ditto-sample-box table tr")
-      .forEach((elm, idx) => {
-        elm.removeChild(elm.children[3]);
-        elm.removeChild(elm.children[2]);
-        elm.removeChild(elm.children[1]);
-      });
-  }
-}
-
-function divBuilderAnime(id, data) {
-  divBuilder(id, data);
-
-  const cards = document.querySelectorAll(id + " .ditto-card");
-  for (let i = 0; i < data["text_list"].length; i++) {
-    cards[i].querySelector("div:nth-child(1)").innerHTML =
-      "<p style='font-weight: bold;'>Anime: " +
       data["name_list"][i] +
       "</p>" +
       cards[i].querySelector("div:nth-child(1)").innerHTML;
@@ -457,54 +441,12 @@ const celebData = {
   prompt_time: [8.731, 7.43, 6.873, 8.266, 7.152, 16.718, 8.638],
 };
 
-const animeData = {
-  text_list: [
-    "We must unite and harness our strengths, for the fate of our world hangs in the balance.",
-    "However, if you choose to stay, know that the truth I unveil may forever alter the course of your journey.",
-    "So here we are, trying to catch up, and hoping this day turns around soon.",
-    "And sometimes, in both realms, it's not just about shining the brightest, but enduring the longest.",
-    "But to those who knew her well, it was a symbol of her unwavering determination and spirit.",
-    "We have the responsibility to ensure power and technology are used for the greater good.",
-    "Our goal is to bridge communication gaps and preserve the richness of these unique languages.",
-  ],
-
-  path_template_list: [
-    "audios/famous/optimusprime_{}.wav",
-    "audios/famous/sherlock_{}.wav",
-    "audios/famous/jessie_{}.wav",
-    "audios/famous/caine_{}.wav",
-    "audios/famous/rachel_{}.wav",
-    "audios/famous/robert_{}.wav",
-    "audios/famous/zuck_{}.wav",
-  ],
-  name_list: [
-    "Optimus Prime",
-    "Benedict Cumberbatch",
-    "Jessie Eisenberg",
-    "Michael Caine",
-    "Rachel McAdams",
-    "Robert Downey Jr.",
-    "Mark Zuckerberg",
-  ],
-  prompt_text_list: [
-    "Perhaps, in any case, we had better see some improvement, or this battle may be lost before it has truly begun.",
-    "So maybe, that you would prefer to forgo my secret rather than consent to becoming a prisoner here for what might be several days.",
-    "I'm starting this, twelve minutes late which is annoying and not my fault. Rachel needed my help and Ziggy would not stop crying.",
-    "What you need to be a star in movies is not that different from what you need to be a star in the other universe. It just takes a little more luck.",
-    "So far, the ordinary observer, an extraordinary observer might have seen that the chin was very pointed and pronounced. ",
-    "They, say the best weapon is one you never have to fire. I respectfully disagree! I prefer, the weapon you only have to fire once! That's how dad did it! that's how America does it! and it's worked out pretty well so far.",
-    "Alright so our team developed the first speech to speech AI translation system, that works for languages that are only spoken and not written like Hokkien.",
-  ],
-  // prompt_time: Array(7).fill(3),
-  prompt_time: [8.731, 7.43, 6.873, 8.266, 7.152, 16.718, 8.638],
-};
-
 divBuilderCeleb("#celeb-box", celebData);
-// divBuilderAnime("#anime-box", animeData);
-// divBuilder("#librispeech-box", librispeechData);
-// divBuilderMLS("#mls-box", mlsData);
+//divBuilder("#librispeech-box", librispeechData);
+//divBuilder("#vctk-box", vctkData);
+//divBuilderMLS("#mls-box", mlsData);
 let librispeechFlag = false;
-let animeFlag = false;
+let vctkFlag = false;
 let mlsFlag = false;
 
 document
@@ -515,14 +457,6 @@ document
     if (!librispeechFlag) {
       librispeechFlag = true;
       divBuilderLibriSpeech("#librispeech-box", librispeechData);
-    }
-  });
-document
-  .querySelector('button[data-bs-toggle="tab"][data-bs-target="#anime-box"]')
-  .addEventListener("shown.bs.tab", function (event) {
-    if (!mlsFlag) {
-      animeFlag = true;
-      divBuilderAnime("#anime-box", animeData);
     }
   });
 document
