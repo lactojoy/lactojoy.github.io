@@ -138,6 +138,10 @@ function divBuilderLibriSpeech(id, data) {
       "src",
       data["path_template_list"][i].replace("{}", "vall-e"),
     );
+    // sampleAudioList[4].setAttribute(
+    //   "src",
+    //   data["path_template_list"][i].replace("{}", "clam"),
+    // );
 
     // inject functions
     const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
@@ -171,87 +175,6 @@ function divBuilderLibriSpeech(id, data) {
   const footnote2 = document.createElement("span");
   footnote2.innerHTML =
     '<sup id="footnote2-1">2</sup><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a>';
-
-  fragment.appendChild(footnote1);
-  fragment.appendChild(footnote2);
-
-  const root = document.querySelector(id);
-  root.appendChild(fragment);
-}
-
-function divBuilderVCTK(id, data) {
-  const fragment = document.createDocumentFragment();
-
-  for (let i = 0; i < data["text_list"].length; i++) {
-    const copiedNode = document.importNode(
-      document.querySelector("#prompt-template").content,
-      true,
-    );
-
-    // inject values
-    const promptText = copiedNode.querySelector(".ditto-prompt-text > span");
-    promptText.innerText = data["prompt_text_list"][i];
-    const text = copiedNode.querySelector(".ditto-text > span");
-    text.innerText = data["text_list"][i];
-
-    const audioOursAll = copiedNode.querySelector(".ditto-audioviz audio");
-    audioOursAll.setAttribute(
-      "src",
-      data["path_template_list"][i].replace("{}", "ours_all"),
-    );
-
-    const sampleAudioList = copiedNode.querySelectorAll(
-      ".ditto-sample-box audio",
-    );
-    sampleAudioList[0].setAttribute(
-      "src",
-      data["path_template_list"][i].replace("{}", "prompt"),
-    );
-    sampleAudioList[1].setAttribute(
-      "src",
-      data["path_template_list"][i].replace("{}", "gt"),
-    );
-    sampleAudioList[2].setAttribute(
-      "src",
-      data["path_template_list"][i].replace("{}", "yourtts"),
-    );
-    sampleAudioList[3].setAttribute(
-      "src",
-      data["path_template_list"][i].replace("{}", "vall-e"),
-    );
-
-    // inject functions
-    const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
-    audioVisualizer(audioOursAll, canvas, data["prompt_time"][i]);
-
-    const toggle = copiedNode.querySelector(".ditto-toggle");
-    const sampleBox = copiedNode.querySelector(".ditto-sample-box");
-    toggle.children[0].onclick = function () {
-      toggle.children[0].classList.remove("show");
-      toggle.children[1].classList.add("show");
-      sampleBox.classList.add("show");
-    };
-    toggle.children[1].onclick = function () {
-      toggle.children[0].classList.add("show");
-      toggle.children[1].classList.remove("show");
-      sampleBox.classList.remove("show");
-    };
-    const openToggle = copiedNode.querySelector(
-      ".ditto-toggle div:nth-child(1)",
-    );
-    const closeToggle = copiedNode.querySelector(
-      ".ditto-toggle div:nth-child(2)",
-    );
-
-    fragment.appendChild(copiedNode);
-  }
-
-  const footnote1 = document.createElement("span");
-  footnote1.innerHTML =
-    '<sup id="footnote1-2">1</sup><a href="https://edresson.github.io/YourTTS/">https://edresson.github.io/YourTTS/</a><br>';
-  const footnote2 = document.createElement("span");
-  footnote2.innerHTML =
-    '<sup id="footnote2-2">2</sup><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a>';
 
   fragment.appendChild(footnote1);
   fragment.appendChild(footnote2);
@@ -300,6 +223,10 @@ function divBuilder(id, data) {
       "src",
       data["path_template_list"][i].replace("{}", "vall-e"),
     );
+    // sampleAudioList[4].setAttribute(
+    //   "src",
+    //   data["path_template_list"][i].replace("{}", "clam"),
+    // );
 
     // inject functions
     const canvas = copiedNode.querySelector(".ditto-audioviz canvas");
@@ -426,45 +353,6 @@ const librispeechData = {
     "urs passed wearily by and movement could yet be heard about",
   ],
   prompt_time: Array(8).fill(3),
-};
-
-const vctkData = {
-  text_list: [
-    "We have to reduce the number of plastic bags.",
-    "So what is the campaign about?",
-    "My life has changed a lot.",
-    "Nothing is yet confirmed.",
-    "I could hardly move for the next couple of days.",
-    "His son has been travelling with the Tartan Army for years.",
-    "Her husband was very concerned that it might be fatal.",
-    "We've made a couple of albums.",
-  ],
-
-  path_template_list: [
-    "audios/vctk/vctk_p254_{}.wav",
-    "audios/vctk/vctk_p263_{}.wav",
-    "audios/vctk/vctk_p273_{}.wav",
-    "audios/vctk/vctk_p255_{}.wav",
-    "audios/vctk/vctk_p262_{}.wav",
-    "audios/vctk/vctk_p256_{}.wav",
-    "audios/vctk/vctk_p248_{}.wav",
-    "audios/vctk/vctk_p233_{}.wav",
-  ],
-
-  prompt_text_list: [
-    "There will be widespread support on all sides.",
-    "It is just a tax on employment.",
-    "We have to offer value for money.",
-    "It is a memorial.",
-    "I had decided to quit the show.",
-    "It was nice.",
-    "It was that bad, that low.",
-    "I was in daily contact.",
-  ],
-  prompt_time: [
-    2.991833333333333, 2.9721041666666665, 2.5719791666666665, 2.312, 2.9730625,
-    2.7310208333333335, 2.9568333333333334, 2.935625,
-  ],
 };
 
 const mlsData = {
@@ -612,9 +500,9 @@ const animeData = {
 };
 
 divBuilderCeleb("#celeb-box", celebData);
-divBuilderAnime("#anime-box", animeData);
-divBuilder("#librispeech-box", librispeechData);
-divBuilderMLS("#mls-box", mlsData);
+// divBuilderAnime("#anime-box", animeData);
+// divBuilder("#librispeech-box", librispeechData);
+// divBuilderMLS("#mls-box", mlsData);
 let librispeechFlag = false;
 let animeFlag = false;
 let mlsFlag = false;
@@ -634,7 +522,7 @@ document
   .addEventListener("shown.bs.tab", function (event) {
     if (!mlsFlag) {
       animeFlag = true;
-      divBuilderMLS("#anime-box", animeData);
+      divBuilderAnime("#anime-box", animeData);
     }
   });
 document
