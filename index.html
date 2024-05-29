@@ -299,10 +299,14 @@
             >
               <h2 id="robustness" style="text-align: center">Robustness</h2>
               <p>
-                CLaM-TTS can produce robust speech, evidenced by its low WER.
-                Samples are taken from the Mega-TTS demo<sup
-                  ><a href="#footnote4">1</a></sup
-                >.
+                DiTTo-TTS can generate robust speech, as demonstrated by its low WER.
+                Additionally, our model is capable of consistently producing a
+                '<b>whispering</b>' effect (please listen to the first sample).
+                Baseline samples are taken from the Mega-TTS demo<sup
+                  ><a href="#footnote1">1</a></sup
+                > and CLaM-TTS demo<sup
+                ><a href="#footnote2">2</a></sup
+              >.
               </p>
               <div class="card card-body ditto-card">
                 <div class="ditto-sample-box">
@@ -321,6 +325,7 @@
                           </th>
                           <th style="text-align: center">Mega-TTS</th>
                           <th style="text-align: center">CLaM-TTS</th>
+                          <th style="text-align: center">DiTTo-TTS</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -351,6 +356,16 @@
                             </audio>
                           </td>
                           <td data-label="CLaM-TTS" style="text-align: center">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              style="width: 140px"
+                            >
+                              <source src="audios/robust/1_clam.wav" autoplay />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td data-label="DiTTo-TTS" style="text-align: center">
                             <audio
                               controls="controls"
                               preload="none"
@@ -390,6 +405,16 @@
                               preload="none"
                               style="width: 140px"
                             >
+                              <source src="audios/robust/0_clam.wav" autoplay />
+                              Your browser does not support the audio element.
+                            </audio>
+                          </td>
+                          <td data-label="DiTTo-TTS" style="text-align: center">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              style="width: 140px"
+                            >
                               <source src="audios/robust/0_ours.wav" autoplay />
                               Your browser does not support the audio element.
                             </audio>
@@ -400,9 +425,13 @@
                   </div>
                 </div>
               </div>
-              <sup id="footnote4">1</sup
+              <sup id="footnote1">1</sup
               ><a href="https://mega-tts.github.io/demo-page/"
                 >https://mega-tts.github.io/demo-page/</a
+              ><br>
+              <sup id="footnote2">2</sup
+              ><a href="https://clam-tts.github.io/"
+                >https://clam-tts.github.io/</a
               >
             </div>
 
@@ -415,11 +444,11 @@
                 Speech Diversity
               </h2>
               <p>
-                CLaM-TTS can synthesize speech with diverse prosody and timbre
-                from various speakers when generated without a prompt. First
-                four text samples are brought from Vall-E demo<sup
-                  ><a href="#footnote3">1</a></sup
-                >, and the last three are from Gigaspeech test set.
+                DiTTo-TTS can synthesize speech with diverse <b>prosody and timbre</b>,
+                and even <b>environmental background sounds</b>, from <b>various speakers</b>
+                when generated without a prompt. First three are from Gigaspeech
+                test set, and the last four text samples are brought from
+                Vall-E demo<sup><a href="#footnote1">1</a></sup>.
               </p>
               <div class="card card-body ditto-card">
                 <div class="ditto-sample-box">
@@ -436,163 +465,6 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <td data-label="Text">Because we do not need it.</td>
-                          <td data-label="Sample #1">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Becau_000.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #2">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Becau_001.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #3">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Becau_002.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #4">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Becau_003.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #5">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Becau_004.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">
-                            I must do something about it.
-                          </td>
-                          <td data-label="Sample #1">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/I_mus_000.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #2">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/I_mus_001.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #3">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/I_mus_002.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #4">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/I_mus_003.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #5">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/I_mus_004.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">He has not been named.</td>
-                          <td data-label="Sample #1">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/He_ha_000.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #2">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/He_ha_001.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #3">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/He_ha_002.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #4">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/He_ha_003.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #5">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/He_ha_004.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">
-                            Number ten, fresh nelly is waiting on you, good
-                            night husband.
-                          </td>
-                          <td data-label="Sample #1">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Numbe_000.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #2">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Numbe_001.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #3">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Numbe_002.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #4">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Numbe_003.wav"
-                            ></audio>
-                          </td>
-                          <td data-label="Sample #5">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/speaker_diversity/Numbe_004.wav"
-                            ></audio>
-                          </td>
-                        </tr>
                         <tr>
                           <td data-label="Text">
                             so it’s really for us. it’s kind of like the ah
@@ -717,12 +589,169 @@
                             ></audio>
                           </td>
                         </tr>
+                        <tr>
+                          <td data-label="Text">
+                            Number ten, fresh nelly is waiting on you, good
+                            night husband.
+                          </td>
+                          <td data-label="Sample #1">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Numbe_000.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #2">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Numbe_001.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #3">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Numbe_002.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #4">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Numbe_003.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #5">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Numbe_004.wav"
+                            ></audio>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Text">Because we do not need it.</td>
+                          <td data-label="Sample #1">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Becau_000.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #2">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Becau_001.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #3">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Becau_002.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #4">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Becau_003.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #5">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/Becau_004.wav"
+                            ></audio>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Text">
+                            I must do something about it.
+                          </td>
+                          <td data-label="Sample #1">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/I_mus_000.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #2">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/I_mus_001.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #3">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/I_mus_002.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #4">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/I_mus_003.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #5">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/I_mus_004.wav"
+                            ></audio>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td data-label="Text">He has not been named.</td>
+                          <td data-label="Sample #1">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/He_ha_000.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #2">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/He_ha_001.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #3">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/He_ha_002.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #4">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/He_ha_003.wav"
+                            ></audio>
+                          </td>
+                          <td data-label="Sample #5">
+                            <audio
+                              controls="controls"
+                              preload="none"
+                              src="audios/speaker_diversity/He_ha_004.wav"
+                            ></audio>
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
-              <sup id="footnote3">1</sup
+              <sup id="footnote1">1</sup
               ><a
                 href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/"
                 >https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a
