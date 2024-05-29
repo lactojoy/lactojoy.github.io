@@ -176,11 +176,11 @@
               <button
                 class="nav-link"
                 data-bs-toggle="tab"
-                data-bs-target="#text-prompt-box"
+                data-bs-target="#speech-rate-contrl-box"
                 type="button"
                 role="tab"
               >
-                Text Prompt
+                Speech Rate Controllability
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -729,20 +729,21 @@
               >
             </div>
             <div
-              id="text-prompt-box"
+              id="speech-rate-contrl-box"
               role="tabpanel"
               class="tab-pane fade container pt-5 shadow p-5 mb-5 bg-white rounded"
             >
-              <h2 id="text-prompt" style="text-align: center">Text Prompt</h2>
+              <h2 id="speech-rate-contrl" style="text-align: center">Speech Rate Controllability</h2>
               <p>
-                CLaM-TTS can generate voices that match the speaker's meta
-                information provided in the text, a feature we term "text
-                prompting". By utilizing emotion information from the Korean
-                dataset, CLaM-TTS is capable of generating emotional speech as
-                demonstrated below. At times, even without explicit text
-                prompting, the system discerns the text's meaning and outputs
-                appropriately emotional speech. For more details, refer to
-                <b>Appendix B.2</b> of our paper.
+                DiTTo-TTS can synthesize the same text into audio of varying lengths.
+                This variable-length modeling allows for speech rate control by adjusting
+                the total duration of the generated speech, as shown in the following
+                mel-spectrogram. The speech rate decreases from top to bottom.
+                For more details, refer to <b>Section 6.1</b> of our paper.
+              </p>
+              <p style="text-align: center">
+                <img src="asset/speech_rate_control.png" height="400" width="600"
+                  class="img-fluid" />
               </p>
               <div class="card card-body ditto-card">
                 <div class="ditto-sample-box">
@@ -750,224 +751,35 @@
                     <table class="table table-hover pt-2">
                       <thead>
                         <tr>
-                          <th colspan="2">Text</th>
+                          <th>Text</th>
+                          <th>Length of Latent Audio</th>
                           <th>Sample</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td data-label="Text">woman, Happy, 행복하다:</td>
-                          <td>
-                            도련님은 나무토막을 지팡이로 짚고 싱글싱글 웃고
-                            있다.
-                          </td>
+                          <td data-label="Text" rowspan="4">But to those who knew her well, it was a symbol of <br> her unwavering determination and spirit.</td>
+                          <td data-label="Length">38</td>
                           <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_woman_happy.wav"
-                            ></audio>
+                            <audio controls="controls" preload="none" src="audios/speech_rate/speech_rate_control_0.wav"></audio>
                           </td>
                         </tr>
                         <tr>
-                          <td data-label="Text">man, Happy, 행복하다:</td>
-                          <td>
-                            도련님은 나무토막을 지팡이로 짚고 싱글싱글 웃고
-                            있다.
-                          </td>
+                          <td data-label="Length">43</td>
                           <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_man_happy.wav"
-                            ></audio>
+                            <audio controls="controls" preload="none" src="audios/speech_rate/speech_rate_control_1.wav"></audio>
                           </td>
                         </tr>
                         <tr>
-                          <td data-label="Text"></td>
-                          <td>
-                            도련님은 나무토막을 지팡이로 짚고 싱글싱글 웃고
-                            있다.
-                          </td>
+                          <td data-label="Length">53</td>
                           <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_happy.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="Text">woman, Sad, 그립다:</td>
-                          <td>사랑하는 부인을 얼마 전에 잃었다.</td>
-
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_woman_sad.wav"
-                            ></audio>
+                            <audio controls="controls" preload="none" src="audios/speech_rate/speech_rate_control_2.wav"></audio>
                           </td>
                         </tr>
                         <tr>
-                          <td data-label="Text">man, Sad, 그립다:</td>
-                          <td>사랑하는 부인을 얼마 전에 잃었다.</td>
+                          <td data-label="Length">63</td>
                           <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_man_sad.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text"></td>
-                          <td>사랑하는 부인을 얼마 전에 잃었다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_sad.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="Text">woman, Angry, 언짢다:</td>
-                          <td>내가 오디오 좀 켜달라고 했잖아.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_woman_angry.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">man, Angry, 언짢다:</td>
-                          <td>내가 오디오 좀 켜달라고 했잖아.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_man_angry.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text"></td>
-                          <td>내가 오디오 좀 켜달라고 했잖아.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_angry.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="Text">woman, Anxious, 두렵다:</td>
-                          <td>산속, 물소리만 나고 바람이 무서웠습니다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_woman_anxious.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">man, Anxious, 두렵다:</td>
-                          <td>산속, 물소리만 나고 바람이 무서웠습니다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_man_anxious.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text"></td>
-                          <td>산속, 물소리만 나고 바람이 무서웠습니다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_anxious.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="Text">
-                            woman, Embarrassed, 아찔하다:
-                          </td>
-                          <td>가슴이 두근거리고 팔이 후둘후둘했다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_woman_embarrassed.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">man, Embarrassed, 아찔하다:</td>
-                          <td>가슴이 두근거리고 팔이 후둘후둘했다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_man_embarrassed.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text"></td>
-                          <td>가슴이 두근거리고 팔이 후둘후둘했다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_embarrassed.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-
-                        <tr>
-                          <td data-label="Text">woman, Hurt, 섭섭하다:</td>
-                          <td>몇 번이나 이렇게 한탄을 했었다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_woman_hurt.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text">man, Hurt, 섭섭하다:</td>
-                          <td>몇 번이나 이렇게 한탄을 했었다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_man_hurt.wav"
-                            ></audio>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td data-label="Text"></td>
-                          <td>몇 번이나 이렇게 한탄을 했었다.</td>
-                          <td data-label="Sample">
-                            <audio
-                              controls="controls"
-                              preload="none"
-                              src="audios/text_prompt/text_hurt.wav"
-                            ></audio>
+                            <audio controls="controls" preload="none" src="audios/speech_rate/speech_rate_control_3.wav"></audio>
                           </td>
                         </tr>
                       </tbody>
