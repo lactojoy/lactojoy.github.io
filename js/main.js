@@ -405,6 +405,8 @@ const mlsData = {
   text_list: [
     "o god our hands are few and faint our hope rests all with thee lend us thy hand in this sore strait and thine the glory be",
     "angelica broke in in her energetic way if you're going to be a duke i won't be left plain miss hamilton wells you couldn't be plain miss anything",
+    "같은 시간 에프조의 멕시코와 스웨덴 역시 조별리그 삼차전을 치른다.",
+    "실현할 기회를 얻지 못하다 미국의 전기회사를 방문해 계획을 말했습니다.",
     "und grinst nun erst beginnt die praktische übung bin ich nicht schon allzu erschöpft durch das theoretische wohl allzu erschöpft das gehört zu meinem schicksal trotzdem greife ich so gut ich kann nach der hingereichten flasche",
     "wenn nicht mr osborne ein bescheidener fußgänger gewesen wäre noch ist der beifall in der luft da lösen ihn plötzlich andere töne ab der marquis von blandford",
     "en toen jammerde het ook in het schrijfboek van hjalmar o dat was vreselijk om aan te horen op iedere bladzijde stonden van boven naar beneden de grote letters en naast iedere grote letter stond een kleine dat was het voorbeeld",
@@ -424,6 +426,8 @@ const mlsData = {
   path_template_list: [
     "audios/mls/mls_english_10611_10308_000071_{}.wav",
     "audios/mls/mls_english_12278_12446_000057_{}.wav",
+    "audios/multi/0006_G2A3E7_KYH_001279_wav_c_2_{}.wav",
+    "audios/multi/0001_G1A3E6S0C0_PSB_000046_wav_c_0_{}.wav",
     "audios/mls/mls_german_2252_1599_000090_{}.wav",
     "audios/mls/mls_german_1844_931_000001_{}.wav",
     "audios/mls/mls_dutch_3034_2211_000142_{}.wav",
@@ -442,6 +446,8 @@ const mlsData = {
   lang_list: [
     "English",
     "English",
+    "Korean",
+    "Korean",
     "German",
     "German",
     "Dutch",
@@ -457,8 +463,8 @@ const mlsData = {
     "Polish",
     "Polish",
   ],
-  prompt_text_list: new Array(16),
-  prompt_time: Array(16).fill(3),
+  prompt_text_list: new Array(18),
+  prompt_time: Array(18).fill(3),
 };
 
 const celebData = {
