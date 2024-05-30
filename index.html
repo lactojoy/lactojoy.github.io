@@ -46,12 +46,12 @@
                   style="font-weight: 760">T</span>ransformer
 
               </h3>
-              <p class="lead fw-bold">
+              <!-- <p class="lead fw-bold">
                 |<span
                   style="padding: .375rem .75rem; font-size: 1rem;">OpenReview</span>|
-              </p>
+              </p> -->
               <p class="links">
-                <a target="_blank" href="">OpenReview</a>
+                <a target="_blank" href="https://openreview.net/forum?id=ClEKY8kZ92&referrer=%5BAuthor%20Console%5D(%2Fgroup%3Fid%3DNeurIPS.cc%2F2024%2FConference%2FAuthors%23your-submissions)">OpenReview</a>
               </p>
             </div>
             <p>
@@ -220,8 +220,8 @@
                 When you click on "Show baselines", you can see the ground truth
                 and baseline audio, etc. YourTTS, Vall-E, and CLaM-TTS audios are brought
                 from YourTTS demo<sup><a href="#footnote1-1">1</a></sup>,
-                 Vall-E demo<sup><a href="#footnote2-1">2</a></sup
-                >, and CLaM-TTS demo<sup><a href="#footnote3-1">3</a></sup
+                 Vall-E demo<sup><a href="#footnote1-2">2</a></sup
+                >, and CLaM-TTS demo<sup><a href="#footnote1-3">3</a></sup
                   > respectively.
               </p>
             </div>
@@ -247,7 +247,7 @@
                 For further details, please see <b>Multilingual Evaluation</b> part in <b>Section 5.1</b> of our paper.
                 When you click on "Show baselines", you can see the ground truth
                 and baseline audio, etc. CLaM-TTS audios are brought from
-                CLaM-TTS demo<sup><a href=“#footnote1-1”>1</a></sup>
+                CLaM-TTS demo<sup><a href="#footnote2-1">1</a></sup>.
               </p>
             </div>
             <div
@@ -268,7 +268,7 @@
                 voice, background noise, and speaking style. When you click on
                 "Show baselines", you can see the ground truth and baseline
                 audio, etc. Texts corresponding to the generated audio and CLaM-TTS audios are brought from
-                CLaM-TTS demo<sup><a href=“#footnote1-1”>1</a></sup>
+                CLaM-TTS demo<sup><a href="#footnote3-1">1</a></sup>.
               </p>
             </div>
             <div
@@ -289,7 +289,7 @@
                 voice, background noise, and speaking style. When you click on
                 "Show baselines", you can see the ground truth and baseline
                 audio, etc. Texts corresponding to the generated audio and Mega-TTS 2 audios are brought from
-                Mega-TTS 2 demo<sup><a href=“#footnote1-1”>1</a></sup>
+                Mega-TTS 2 demo<sup><a href="#footnote4-1">1</a></sup>.
               </p>
             </div>
             <div
@@ -303,9 +303,9 @@
                 Additionally, our model is capable of consistently producing a
                 '<b>whispering</b>' effect (please listen to the first sample).
                 Baseline samples are taken from the Mega-TTS demo<sup
-                  ><a href="#footnote1">1</a></sup
+                  ><a href="#footnote5-1">1</a></sup
                 > and CLaM-TTS demo<sup
-                ><a href="#footnote2">2</a></sup
+                ><a href="#footnote5-2">2</a></sup
               >.
               </p>
               <div class="card card-body ditto-card">
@@ -425,11 +425,11 @@
                   </div>
                 </div>
               </div>
-              <sup id="footnote1">1</sup
+              <sup id="footnote5-1">1</sup
               ><a href="https://mega-tts.github.io/demo-page/"
                 >https://mega-tts.github.io/demo-page/</a
               ><br>
-              <sup id="footnote2">2</sup
+              <sup id="footnote5-2">2</sup
               ><a href="https://clam-tts.github.io/"
                 >https://clam-tts.github.io/</a
               >
@@ -446,9 +446,9 @@
               <p>
                 DiTTo-TTS can synthesize speech with diverse <b>prosody and timbre</b>,
                 and even <b>environmental background sounds</b>, from <b>various speakers</b>
-                when generated without a prompt. First three are from Gigaspeech
-                test set, and the last four text samples are brought from
-                Vall-E demo<sup><a href="#footnote1">1</a></sup>.
+                when generated without a prompt. First three text scripts are from Gigaspeech
+                test set, and the last four are brought from
+                Vall-E demo<sup><a href="#footnote6-1">1</a></sup>.
               </p>
               <div class="card card-body ditto-card">
                 <div class="ditto-sample-box">
@@ -751,7 +751,7 @@
                   </div>
                 </div>
               </div>
-              <sup id="footnote1">1</sup
+              <sup id="footnote6-1">1</sup
               ><a
                 href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/"
                 >https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a
@@ -822,18 +822,133 @@
               role="tabpanel"
               class="tab-pane fade container pt-5 shadow p-5 mb-5 bg-white rounded"
             >
-              <h2 id="compare" style="text-align: center">Comparison with Zero-Shot Demo Cases</h2>
+              <h2 id="compare" style="text-align: center">Comparison with Zero-Shot Samples and Demo Cases</h2>
               <p>
-                We provide some demo comparison samples to compare DiTTo-TTS with baseline models.
-                We download the audio samples from the demo pages of each baseline
-                and then compare them with the audio generated by our model without
-                any resampling. Please refer to <b>Appendix 8.7</b> of our paper for
-                more details about subjective evaluation.
-                Demos for each model can be found at their respective links:
+                We provide some comparison samples to compare DiTTo-TTS with four baseline models.
+                To generate samples from Simple-TTS, we use
+                <a href="https://github.com/asappresearch/simple-tts">the official checkpoints</a>
+                and the text scripts from LibriSpeech test-clean subset. For the other three,
+                E3-TTS, NaturalSpeech 3, and Voicebox, we download the audio samples from the
+                demo pages of each baseline and then compare them with the audio generated by
+                our model without any resampling. Demos for each model can be found at their respective links:
                 <a href="https://e3tts.github.io/">E3-TTS</a>,
                 <a href="https://speechresearch.github.io/naturalspeech3/">NaturalSpeech 3</a>, and
-                <a href="https://voicebox.metademolab.com/zs_tts.html">VoiceBox</a>.
+                <a href="https://voicebox.metademolab.com/zs_tts.html">Voicebox</a>.
+                Please refer to <b>Section 5.1</b> and <b>Appendix 8.7</b> of our
+                paper for more details about subjective evaluation.
+                The details of each baseline can be found in <b>Appendix 8.2</b> of our paper.
               </p>
+              <div class="table-responsive pt-3">
+                <!-- <h3 style="text-align: center">Simple-TTS</h3> -->
+                <table class="table table-hover pt-2">
+                  <thead>
+                    <tr>
+                      <th style="text-align: center">Text</th>
+                      <th style="text-align: center">Prompt</th>
+                      <th style="text-align: center">Simple-TTS (24 kHz)</th>
+                      <th style="text-align: center">DiTTo-TTS (22.05 kHz)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td
+                        style="text-align: left;vertical-align:middle;width: 300px">
+                        do not therefore think that the gothic school is an easy one</td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/1188-133604-0014_wav_p_0_wav_p.wav" autoplay="">Your
+                          browser
+                          does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/1188-133604-0014_wav_p_0.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source
+                            src="audios/comparison/simpletts/1188-133604-0014_wav_p_0_ours.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="text-align: left;vertical-align:middle;width: 300px">
+                        did ever anybody see the like screamed missus poyser running towards the table when her eye had fallen on the blue stream</td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/2094-142345-0029_wav_p_2_wav_p.wav" autoplay="">Your
+                          browser
+                          does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/2094-142345-0029_wav_p_2.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source
+                            src="audios/comparison/simpletts/2094-142345-0029_wav_p_2_ours.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="text-align: left;vertical-align:middle;width: 300px">
+                        it is sold everywhere but for the last three weeks nobody will use any snuff but that sold at the civet cat</td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/3729-6852-0029_wav_p_1_wav_p.wav" autoplay="">Your
+                          browser
+                          does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/3729-6852-0029_wav_p_1.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source
+                            src="audios/comparison/simpletts/3729-6852-0029_wav_p_1_ours.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                    </tr>
+                    <tr>
+                      <td
+                        style="text-align: left;vertical-align:middle;width: 300px">
+                        and this was why kenneth and beth discovered him conversing with the young woman in the buggy</td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/6829-68771-0006_wav_p_1_wav_p.wav" autoplay="">Your
+                          browser
+                          does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source src="audios/comparison/simpletts/6829-68771-0006_wav_p_1.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                      <td style="text-align: center"><audio controls="controls"
+                          style="width: 300px;">
+                          <source
+                            src="audios/comparison/simpletts/6829-68771-0006_wav_p_1_ours.wav"
+                            autoplay="">Your
+                          browser does not support the audio element.
+                        </audio></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <div class="table-responsive pt-3">
                 <!-- <h3 style="text-align: center">E3-TTS</h3> -->
                 <table class="table table-hover pt-2">
@@ -852,20 +967,20 @@
                         She felt the force of the objections.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_02_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/e3tts/prompt_02_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_02.wav"
+                          <source src="audios/comparison/e3tts/prompt_02.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/e3tts/prompt_02_ours.wav"
+                            src="audios/comparison/e3tts/prompt_02_ours.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
@@ -876,20 +991,20 @@
                         She can't get it out of her head, even after fifty years.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_03_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/e3tts/prompt_03_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_03.wav"
+                          <source src="audios/comparison/e3tts/prompt_03.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/e3tts/prompt_03_ours.wav"
+                            src="audios/comparison/e3tts/prompt_03_ours.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
@@ -900,20 +1015,20 @@
                         "I don't think so," replied Tom.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_13_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/e3tts/prompt_13_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_13.wav"
+                          <source src="audios/comparison/e3tts/prompt_13.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/e3tts/prompt_13_ours.wav"
+                            src="audios/comparison/e3tts/prompt_13_ours.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
@@ -924,20 +1039,20 @@
                         But at that moment the voice of the stranger was heard from the window.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_17_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/e3tts/prompt_17_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/e3tts/prompt_17.wav"
+                          <source src="audios/comparison/e3tts/prompt_17.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/e3tts/prompt_17_ours.wav"
+                            src="audios/comparison/e3tts/prompt_17_ours.wav"
                             autoplay="">Your
                           browser does not support the audio element.
                         </audio></td>
@@ -946,7 +1061,7 @@
                 </table>
               </div>
               <div class="table-responsive pt-3">
-                <!-- <h3 style="text-align: center">NaturalSpeech3</h3> -->
+                <!-- <h3 style="text-align: center">NaturalSpeech 3</h3> -->
                 <table class="table table-hover pt-2">
                   <thead>
                     <tr>
@@ -963,21 +1078,21 @@
                         They think you're proud because you've been away to school or something.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/ns3/1_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/ns3/1_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/1.wav"
+                            src="audios/comparison/ns3/1.wav"
                             autoplay="">Your browser does not support the audio
                           element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/1_ours.wav"
+                            src="audios/comparison/ns3/1_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -989,21 +1104,21 @@
                         There were only four stationers of any consequences in the town, and at each Holmes produced his pencil chips, and bid high for a duplicate.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/ns3/4_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/ns3/4_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/4.wav"
+                            src="audios/comparison/ns3/4.wav"
                             autoplay="">Your browser does not support the audio
                           element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/4_ours.wav"
+                            src="audios/comparison/ns3/4_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1015,21 +1130,21 @@
                         For, like as not, they must have thought him a prince when they saw his fine cap.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/ns3/a_2_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/ns3/a_2_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/a_2.wav"
+                            src="audios/comparison/ns3/a_2.wav"
                             autoplay="">Your browser does not support the audio
                           element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/a_2_ours.wav"
+                            src="audios/comparison/ns3/a_2_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1041,21 +1156,21 @@
                         The strong position held by the Edison system under the strenuous competition that was already springing up was enormously improved by the introduction of the three wire system and it gave an immediate impetus to incandescent lighting.</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/ns3/a_4_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/ns3/a_4_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/a_4.wav"
+                            src="audios/comparison/ns3/a_4.wav"
                             autoplay="">Your browser does not support the audio
                           element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/ns3/a_4_ours.wav"
+                            src="audios/comparison/ns3/a_4_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1065,13 +1180,13 @@
                 </table>
               </div>
               <div class="table-responsive pt-3">
-                <!-- <h3 style="text-align: center">VoiceBox</h3> -->
+                <!-- <h3 style="text-align: center">Voicebox</h3> -->
                 <table class="table table-hover pt-2">
                   <thead>
                     <tr>
                       <th style="text-align: center">Text</th>
                       <th style="text-align: center">Prompt</th>
-                      <th style="text-align: center">VoiceBox (16 kHz)</th>
+                      <th style="text-align: center">Voicebox (16 kHz)</th>
                       <th style="text-align: center">DiTTo-TTS (22.05 kHz)</th>
                     </tr>
                   </thead>
@@ -1082,14 +1197,14 @@
                         He was in deep converse with the clerk and entered the hall holding him by the arm</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/voicebox/61-70970-0007_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/voicebox/61-70970-0007_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/61-70970-0007.wav"
+                            src="audios/comparison/voicebox/61-70970-0007.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1097,7 +1212,7 @@
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/61-70970-0007_ours.wav"
+                            src="audios/comparison/voicebox/61-70970-0007_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1109,14 +1224,14 @@
                         Number ten fresh nelly is waiting on you good night husband</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/voicebox/1089-134686-0004_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/voicebox/1089-134686-0004_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/1089-134686-0004.wav"
+                            src="audios/comparison/voicebox/1089-134686-0004.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1124,7 +1239,7 @@
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/1089-134686-0004_ours.wav"
+                            src="audios/comparison/voicebox/1089-134686-0004_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1136,14 +1251,14 @@
                         Yea his honourable worship is within but he hath a godly minister or two with him and likewise a leech</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/voicebox/1221-135767-0014_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/voicebox/1221-135767-0014_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/1221-135767-0014.wav"
+                            src="audios/comparison/voicebox/1221-135767-0014.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1151,7 +1266,7 @@
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/1221-135767-0014_ours.wav"
+                            src="audios/comparison/voicebox/1221-135767-0014_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1163,14 +1278,14 @@
                         Thus did this humane and right minded father comfort his unhappy daughter and her mother embracing her again did all she could to soothe her feelings</td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
-                          <source src="audios/demo_comparison/voicebox/5639-40744-0020_wav_p.wav" autoplay="">Your
+                          <source src="audios/comparison/voicebox/5639-40744-0020_wav_p.wav" autoplay="">Your
                           browser
                           does not support the audio element.
                         </audio></td>
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/5639-40744-0020.wav"
+                            src="audios/comparison/voicebox/5639-40744-0020.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1178,7 +1293,7 @@
                       <td style="text-align: center"><audio controls="controls"
                           style="width: 300px;">
                           <source
-                            src="audios/demo_comparison/voicebox/5639-40744-0020_ours.wav"
+                            src="audios/comparison/voicebox/5639-40744-0020_ours.wav"
                             autoplay="">Your
                           browser does not support the audio
                           element.
@@ -1191,13 +1306,14 @@
               <br>
               <h2 id="compare" style="text-align: center">Comparison with LibriSpeech Zero-Shot Demo Cases</h2>
               <p>
-                Our samples have been downsampled to 16kHz in this section.
-                <br>
+                Here are some comparison samples to evaluate DiTTo-TTS against four other baseline models:
+                Mega-TTS, NaturalSpeech 2, VALL-E, and CLaM-TTS. Our samples are downsampled to 16kHz for this section.
                 Demos for each model can be found at their respective links:
                 <a href="https://mega-tts.github.io/demo-page/">Mega-TTS</a>,
-                <a href="https://speechresearch.github.io/naturalspeech2/">NaturalSpeech2</a>,
+                <a href="https://speechresearch.github.io/naturalspeech2/">NaturalSpeech 2</a>,
                 <a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">VALL-E</a>, and
                 <a href="https://clam-tts.github.io/">CLaM-TTS</a>.
+                The details of each baseline can be found in <b>Appendix 8.2</b> of our paper.
               </p>
                   <div class="table-responsive pt-3">
                     <table class="table table-hover pt-2">

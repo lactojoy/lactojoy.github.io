@@ -179,10 +179,10 @@ function divBuilderLibriSpeech(id, data) {
     '<sup id="footnote1-1">1</sup><a href="https://edresson.github.io/YourTTS/">https://edresson.github.io/YourTTS/</a><br>';
   const footnote2 = document.createElement("span");
   footnote2.innerHTML =
-    '<sup id="footnote2-1">2</sup><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a><br>';
+    '<sup id="footnote1-2">2</sup><a href="https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/">https://www.microsoft.com/en-us/research/project/vall-e-x/vall-e/</a><br>';
   const footnote3 = document.createElement("span");
   footnote3.innerHTML =
-    '<sup id="footnote3-1">3</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
+    '<sup id="footnote1-3">3</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
 
   fragment.appendChild(footnote1);
   fragment.appendChild(footnote2);
@@ -295,7 +295,7 @@ function divBuilderMLS(id, data) {
   const fragment = document.createDocumentFragment();
   const footnote1 = document.createElement("span");
   footnote1.innerHTML =
-    '<sup id="footnote1-1">1</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
+    '<sup id="footnote2-1">1</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
 
   fragment.appendChild(footnote1);
 
@@ -326,7 +326,7 @@ function divBuilderCeleb(id, data) {
   const fragment = document.createDocumentFragment();
   const footnote1 = document.createElement("span");
   footnote1.innerHTML =
-    '<sup id="footnote1-1">1</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
+    '<sup id="footnote3-1">1</sup><a href="https://clam-tts.github.io/">https://clam-tts.github.io/</a>';
 
   fragment.appendChild(footnote1);
 
@@ -357,7 +357,7 @@ function divBuilderAnime(id, data) {
   const fragment = document.createDocumentFragment();
   const footnote1 = document.createElement("span");
   footnote1.innerHTML =
-    '<sup id="footnote1-1">1</sup><a href="https://boostprompt.github.io/boostprompt/">https://boostprompt.github.io/boostprompt/</a>';
+    '<sup id="footnote4-1">1</sup><a href="https://boostprompt.github.io/boostprompt/">https://boostprompt.github.io/boostprompt/</a>';
 
   fragment.appendChild(footnote1);
 
@@ -538,8 +538,8 @@ divBuilderCeleb("#celeb-box", celebData);
 //divBuilder("#vctk-box", vctkData);
 //divBuilderMLS("#mls-box", mlsData);
 let librispeechFlag = false;
-let vctkFlag = false;
 let mlsFlag = false;
+let animeFlag = false;
 
 document
   .querySelector(
@@ -562,8 +562,8 @@ document
 document
   .querySelector('button[data-bs-toggle="tab"][data-bs-target="#anime-box"]')
   .addEventListener("shown.bs.tab", function (event) {
-    if (!mlsFlag) {
-      mlsFlag = true;
+    if (!animeFlag) {
+      animeFlag = true;
       divBuilderAnime("#anime-box", animeData);
     }
   });

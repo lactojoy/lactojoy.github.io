@@ -1,10 +1,9 @@
-Demo page for DiTTo-TTS
+# Demo page for DiTTo-TTS
 
-lactojoy.github.io
 in python3, run the following:
 
-python -m http.server 8000
+`python -m http.server 8000`
 
 and then enter
 
-http://localhost:8000/index.html
+`http://localhost:8000/index.html`
