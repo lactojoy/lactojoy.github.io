@@ -56,31 +56,20 @@
             </div>
             <p>
               <b>Abstract.</b>
-              Diffusion models have demonstrated remarkable success in images,
-              videos, and audio generation.
-              However, applying these models to text-to-speech (TTS) poses
-              challenges due to the need for precise synchronization between
-              text
-              and generated speech.
-              This work presents a latent diffusion model specifically tailored
-              for TTS, integrating pre-trained text and speech encoders without
-              relying on domain-specific modeling.
-              One key feature of this approach is a module that predicts the
-              total
-              length of the generated speech from the given text.
-              Our model leverages the Diffusion Transformer (DiT) and undergoes
-              a
-              network architecture ablation to optimize it for TTS applications.
-              We scale the training dataset to 82K hours and the model size to
-              790M parameters.
-              Our experiments show that the proposed model yields performance
-              that
-              is superior or comparable to state-of-the-art TTS models in terms
-              of
-              naturalness, intelligibility, and speaker similarity.
-              Additionally, our model exhibits robust scalability with
-              increasing
-              data and model size.
+              Diffusion models have achieved remarkable success as powerful generative models
+              across various modalities, including images, videos, and audio. However, applying
+              these models to text-to-speech (TTS) presents challenges due to the need for precise
+              alignment between text and speech. This work introduces a latent diffusion model
+              designed for TTS, integrating pre-trained text and speech encoders without relying
+              on domain-specific factors such as phoneme and duration modeling. Specifically, we
+              adopt the Diffusion Transformer (<b>DiT</b>) <b>to TTS</b> with three key improvements:
+              the architectural enhancement of DiT for TTS, the development of a speech length predictor,
+              and the reinforcement of text-speech alignment through the injection of semantic guidance
+              into speech representation. We also scale the training dataset to 82K hours and the model
+              size to 790M parameters, demonstrating robust scalability with increasing data and model
+              sizes. Extensive experiments show that the proposed method not only simplifies the training
+              process but also yields zero-shot performance that is superior or comparable to
+              state-of-the-art TTS models in terms of naturalness, intelligibility, and speaker similarity.
             </p>
           </div>
 
@@ -101,6 +90,7 @@
                  The rightmost image is the speech length predictor based on causal transformer blocks.
                   Both DiT blocks and the speech length predictor employ cross-attention to condition on text representations from a text encoder.
                    Additionally, DiT blocks utilize AdaLN with the aggregated text embedding. '<b>+</b>' denotes addition, and '<b>c</b>' represents concatenation.
+                   The '<b>text</b>' indicated by the sky blue oval represents the embedding that has passed through the text encoder.
                     The red line indicates a long skip connection between the states before and after the DiT blocks.
             </p>
           </div>
