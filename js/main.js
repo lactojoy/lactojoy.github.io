@@ -238,7 +238,7 @@ function divBuilder(id, data) {
     );
     sampleAudioList[5].setAttribute(
       "src",
-      data["path_template_list"][i].replace("{}", "megatts2"),
+      data["path_template_list"][i].replace("{}", "megatts"),
     );
 
     // inject functions
