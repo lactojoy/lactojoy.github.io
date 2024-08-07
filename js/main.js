@@ -539,14 +539,25 @@ const animeData = {
   prompt_time: [3.239, 9.850, 4.350, 1.750],
 };
 
-divBuilderCeleb("#celeb-box", celebData);
+//divBuilderCeleb("#celeb-box", celebData);
 //divBuilder("#librispeech-box", librispeechData);
 //divBuilder("#vctk-box", vctkData);
 //divBuilderMLS("#mls-box", mlsData);
+let celebFlag = false;
 let librispeechFlag = false;
 let mlsFlag = false;
 let animeFlag = false;
 
+document
+  .querySelector(
+    'button[data-bs-toggle="tab"][data-bs-target="#celeb-box"]',
+  )
+  .addEventListener("shown.bs.tab", function (event) {
+    if (!celebFlag) {
+      celebFlag = true;
+      divBuilderCeleb("#celeb-box", celebData);
+    }
+  });
 document
   .querySelector(
     'button[data-bs-toggle="tab"][data-bs-target="#librispeech-box"]',

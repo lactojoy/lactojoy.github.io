@@ -129,7 +129,7 @@
             </li>
             <li class="nav-item" role="presentation">
               <button
-                class="nav-link active"
+                class="nav-link"
                 data-bs-toggle="tab"
                 data-bs-target="#celeb-box"
                 type="button"
@@ -147,6 +147,17 @@
                 role="tab"
               >
                 Anime Characters
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                data-bs-toggle="tab"
+                data-bs-target="#rebuttal-box"
+                type="button"
+                role="tab"
+              >
+                Rebuttal
               </button>
             </li>
             <li class="nav-item" role="presentation">
@@ -252,7 +263,7 @@
             <div
               id="celeb-box"
               role="tabpanel"
-              class="tab-pane fade show active container pt-5 shadow p-5 mb-5 bg-white rounded"
+              class="tab-pane fade container pt-5 shadow p-5 mb-5 bg-white rounded"
             >
               <h2 id="celeb" style="text-align: center">Celebrities</h2>
               <p>
@@ -290,6 +301,544 @@
                 audio, etc. Texts corresponding to the generated audio and Mega-TTS audios are brought from
                 Mega-TTS demo<sup><a href="#footnote4-1">1</a></sup>.
               </p>
+            </div>
+            <div
+              id="rebuttal-box"
+              role="tabpanel"
+              class="tab-pane fade show active container pt-5 shadow p-5 mb-5 bg-white rounded"
+            >
+              <h2 id="compare" style="text-align: center">Comparison with Voicebox Demo Cases</h2>
+              <p>
+                We provide some comparison samples to compare DiTTo-TTS with Voicebox.
+                Baseline samples are taken from the Voicebox demo<sup
+                ><a href="#footnote15-1">1</a></sup
+                >.
+                Please refer to <b>Section 5.1</b> and <b>Appendix 8.7</b> of our
+                paper for more details about subjective evaluation.
+                The details of each baseline can be found in <b>Appendix 8.2</b> of our paper.
+              </p>
+              <div class="table-responsive pt-3">
+                <!-- <h3 style="text-align: center">Voicebox</h3> -->
+                <table class="table table-hover pt-2">
+                  <thead>
+                    <tr>
+                      <th style="text-align: center">Text</th>
+                      <th style="text-align: center">Prompt</th>
+                      <th style="text-align: center">Voicebox (16 kHz)</th>
+                      <th style="text-align: center">DiTTo-TTS (22.05 kHz)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    Thus did this humane and right minded father comfort his unhappy daughter and her mother embracing her again did all she could to soothe her feelings</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/5639-40744-0020_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/5639-40744-0020.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/5639-40744-0020_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    They moved thereafter cautiously about the hut groping before and about them to find something to show that warrenton had fulfilled his mission</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/61-70970-0024_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/61-70970-0024.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/61-70970-0024_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    And lay me down in thy cold bed and leave my shining lot</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/908-157963-0027_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/908-157963-0027.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/908-157963-0027_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    And the whole night the tree stood still and in deep thought</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/672-122797-0040_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/672-122797-0040.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/672-122797-0040_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    Instead of shoes the old man wore boots with turnover tops and his blue coat had wide cuffs of gold braid</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/1284-1180-0002_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/1284-1180-0002.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/1284-1180-0002_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    The army found the people in poverty and left them in comparative wealth</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/4077-13754-0000_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/4077-13754-0000.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/4077-13754-0000_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    Yea his honourable worship is within but he hath a godly minister or two with him and likewise a leech</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/1221-135767-0014_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/1221-135767-0014.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/1221-135767-0014_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    He was in deep converse with the clerk and entered the hall holding him by the arm</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/61-70970-0007_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/61-70970-0007.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/61-70970-0007_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    Number ten fresh nelly is waiting on you good night husband</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/1089-134686-0004_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/1089-134686-0004.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/1089-134686-0004_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+
+	<tr>
+	  <td
+	    style="text-align: left;vertical-align:middle;width: 300px">
+	    Rather a hypothetical question colonel but i should say it might be a fifty fifty proposition</td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source src="audios/comparison/voicebox/6432-63722-0047_wav_p.wav" autoplay="">Your browser
+	      does not support the audio element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/6432-63722-0047.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	  <td style="text-align: center"><audio controls="controls"
+	      style="width: 300px;">
+	      <source
+	        src="audios/comparison/voicebox/6432-63722-0047_ours.wav"
+	        autoplay="">Your
+	      browser does not support the audio
+	      element.
+	    </audio></td>
+	</tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <br>
+              <h2 id="rebuttal" style="text-align: center">Zero-Shot TTS Samples (Emotion)</h2>
+              <p>
+                The text “Why fades the lotus of the water” is extracted from the LibriSpeech dataset.
+                Baseline samples are taken from the NaturalSpeech 3 demo<sup
+                  ><a href="#footnote15-2">2</a></sup
+                >
+              </p>
+              <div class="card card-body ditto-card">
+              <div class="ditto-sample-box">
+                <div class="table-responsive pt-3">
+                  <table class="table table-hover pt-2">
+                    <thead>
+                      <tr>
+                      <th style="text-align: center">Prompt Emotion</th>
+                      <th style="text-align: center">Prompt</th>
+                      <th style="text-align: center">DiTTo-TTS</th>
+                      <th style="text-align: center">NaturalSpeech 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">neutral</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_9.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_0_neutral_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">happy</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_10.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_1_happy_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">calm</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_11.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_2_calm_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">sad</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_12.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_3_sad_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">angry</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_13.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_4_angry_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">fearful</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_14.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_5_fearful_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">disgust</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_15.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_6_disgust_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">surprised</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/2_prompt_16.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/zs_emo/zs_emo_7_surprised_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 200px;"><source src="audios/robust/ns3_zs_emo/zs_emo_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <h2 id="rebuttal" style="text-align: center">Comparision Results on Ravdess Benchmark</h2>
+              <p>
+                The RAVDESS dataset includes two specific textual prompts: “Dogs are sitting by the door” used for the prompt text, and “Kids are talking by the door” utilized for the synthesis text.
+                Baseline samples are taken from the NaturalSpeech 3 demo<sup
+                  ><a href="#footnote15-2">2</a></sup
+                >
+              </p>
+              <div class="card card-body ditto-card">
+                <div class="ditto-sample-box">
+                  <div class="table-responsive pt-3">
+                    <table class="table table-hover pt-2">
+                      <thead>
+                      <tr>
+                      <th style="text-align: center">Prompt Emotion</th>
+                      <th style="text-align: center">Prompt</th>
+                      <th style="text-align: center">Ground Truth</th>
+                      <th style="text-align: center">DiTTo-TTS</th>
+                      <th style="text-align: center">NaturalSpeech 3</th>
+                      <th style="text-align: center">NaturalSpeech 2</th>
+                      <th style="text-align: center">Voicebox (R)</th>
+                      <th style="text-align: center">VALL-E (R)</th>
+                      <th style="text-align: center">Mega-TTS 2</th>
+                      <th style="text-align: center">StyleTTS 2</th>
+                      <th style="text-align: center">HierSpeech++</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">neutral</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_1.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_1.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_0_neutral_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_0_neutral.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+            
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">happy</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_2.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_2.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_1_happy_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_1_happy.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+            
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">calm</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_3.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_3.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_2_calm_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_2_calm.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+            
+            
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">sad</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_4.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_4.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_3_sad_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_3_sad.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                    
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">angry</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_5.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_5.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_4_angry_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_4_angry.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+            
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">fearful</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_6.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_6.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_5_fearful_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_5_fearful.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                      
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">disgust</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_7.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_7.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_6_disgust_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_6_disgust.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+            
+                      <tr>
+                        <td style="text-align: center;vertical-align:middle;width: 200px;min-width: 200px">surprised</td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_prompt_8.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/2_gt_8.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/gt/rvd_bm_7_surprised_ours.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns3/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/ns2/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/voiceboxr/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/valler/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/megatts2/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/styletts2/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                        <td style="text-align: center"><audio controls="controls" style="width: 160px;"><source src="audios/robust/hierspeechpp/rvd_bm_7_surprised.wav">Your browser does not support the audio element.</audio></td>
+                      </tr>
+                
+                    </tbody>
+                  </table>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <sup id="footnote15-1">1</sup
+              ><a href="https://voicebox.metademolab.com/zs_tts.html"
+                >https://voicebox.metademolab.com/zs_tts.html</a
+              ><br>
+              <sup id="footnote15-2">2</sup
+              ><a href="https://speechresearch.github.io/naturalspeech3/"
+                >https://speechresearch.github.io/naturalspeech3/</a
+              >
             </div>
             <div
               id="robustness-box"
